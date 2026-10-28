@@ -4,47 +4,32 @@
 **Institution:** Chennai Institute of Technology (B.E. Computer Science & Engineering)  
 **Primary Tech Stack:** Modern Front-End (Vite + React or Next.js), Tailwind CSS, Lucide Icons  
 **Deployment Pipeline:** GitHub + Vercel (Continuous Automated Deployment)  
-**Design Theme:** Professional Blue & White Aesthetic with Card Components & Enlarged Profile Picture  
+**Design Theme:** Indigo & Violet AI Aesthetic with Modern Split-Screen Sidebar Layout & Enlarged Profile Picture  
 
 ---
 
 ## 1. Project Overview & Design System
 
-### 1.1 Color Palette
-- **Primary Blue:** `#2563EB` (Tailwind `blue-600`) — Headings, CTA buttons, active states
-- **Deep Navy / Dark Accent:** `#1E3A8A` (Tailwind `blue-900`) — Hero accents, contrast text
-- **Secondary Sky Blue:** `#38BDF8` (Tailwind `sky-400`) — Gradients, badges, hover rings
-- **Background White / Ice Blue:** `#FFFFFF` and `#F8FAFC` (Tailwind `slate-50` / `blue-50/30`)
-- **Card Surfaces:** Pure White (`#FFFFFF`) with subtle border (`border-blue-100`) and soft shadows (`shadow-sm hover:shadow-lg transition-all`)
-- **Text:** Slate Dark (`#0F172A`) for high contrast and accessibility compliance (WCAG AAA)
+### 1.1 Color Palette (Indigo & Violet Gradient)
+- **Base Canvas:** Deepest Obsidian & Indigo `#090A15`
+- **Surface Cards:** Frosted Indigo Surface `#111228` with subtle borders `border-indigo-900/40`
+- **Primary Violet:** `#8B5CF6` (Tailwind `violet-500` to `violet-600`) — Glows, headings, active states
+- **Accent Gradient:** `from-violet-600 via-indigo-500 to-purple-400`
+- **Text:** Crisp White (`#FFFFFF`) with muted lavender-slate (`#94A3B8`) for body text
 
-### 1.2 Layout & Key Components
-1. **Sticky Navigation Bar:** Glassmorphism backdrop (`backdrop-blur-md bg-white/90`), mobile hamburger drawer, smooth scroll navigation.
-2. **Hero Section:**
-   - **Enlarged Profile Picture:** Circular format (`w-36 h-36 md:w-44 md:h-44`) with outer ring border (`ring-4 ring-blue-500/20 shadow-2xl`), utilizing `./assets/profile.jpg`.
-   - Name, headline (AI/ML & Full-Stack Developer), CGPA 9.04 badge, and quick CTA buttons ("View Projects", "Download Resume", "Contact Me").
-3. **About Me:** Academic overview at Chennai Institute of Technology, interest summary (AI/ML, Computer Vision, Full Stack), and 365-day Duolingo German streak badge.
-4. **Experience (Internships):**
-   - CodeAlpha Virtual Internship for Artificial Intelligence (YOLOv8 Object Detection, Streamlit Language Translator).
-   - CodeAlpha Virtual Internship for Java Development (Student Grade Tracker, Stock Trading Platform).
-5. **Projects Showcase (Card Grid):**
-   - *Object Detection (YOLOv8, OpenCV, Python)*
-   - *Language Translator (Python, Streamlit, Googletrans)*
-   - *Stock Trading Platform (Java OOP, HashMaps, Scanner)*
-   - *Pantry-to-Plate (HTML/CSS/JS - Ideathon 2026)*
-   - *StudyPilot Progress Tracker (Python, AI, Streamlit, NumPy)*
-6. **Technical Skills (Categorized Badges):**
-   - Programming Languages: Python, Java, C, C++
-   - Web Technologies: HTML5, CSS3, JavaScript, Tailwind CSS
-   - Databases: MySQL, MongoDB
-   - Frameworks & AI: Streamlit, OpenCV, NumPy, Docker (Basics)
-7. **Achievements & Certifications:**
-   - LeetCode 360+ solved problems & SQL 50 badge
-   - Ideathon 2026 & Made in India 2026 Hackathons
-   - Certifications: Oracle, GDG, Cisco Python 1 & 2, MongoDB
-8. **Contact Section & Footer:**
-   - Interactive contact form (Name, Email, Subject, Message) via Formspree or EmailJS
-   - Social links: GitHub (`github.com/kayalvijaya96-beep`), LinkedIn (`linkedin.com/in/kayalvizhi-sureshkumar-71473b383`), Email (`kayalvijaya96@gmail.com`), Phone (`+91 81228 90296`).
+### 1.2 Layout & Component Architecture (Split-Screen Design)
+1. **Left Sticky Sidebar (`Sidebar.jsx`):**
+   - **Enlarged Profile Avatar:** Framed in a radiant violet-indigo gradient border ring (`from-violet-600 via-indigo-500 to-purple-400`) without obstructive overlay icons.
+   - Name, headline, CGPA 9.04 badge, and bio.
+   - Dynamic in-page navigation anchors with active indicator lines (About, Experience, Projects, Skills, Achievements, Contact).
+   - Bottom social icons (GitHub, LinkedIn, Email, Phone) and "Download Resume" CTA.
+2. **Right Scrollable Feed (`main`):**
+   - About & Strategic Focus
+   - Experience Timeline (CodeAlpha AI & Java Internships)
+   - Projects Grid (YOLOv8 Detection, Translator, Stock Trading, Pantry-to-Plate, StudyPilot)
+   - Technical Skills Matrix (Categorized cards)
+   - Achievements & Certifications
+   - Contact Form & Minimalist Footer
 
 ---
 
