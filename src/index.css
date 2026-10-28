@@ -5,37 +5,26 @@
 @layer base {
   body {
     font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
-    background-color: #090a15;
-    color: #e2e8f0;
+    background-color: #f8fafc;
+    color: #1e293b;
   }
 
-  /* Custom dark scrollbar */
+  /* Custom light violet scrollbar */
   ::-webkit-scrollbar {
     width: 7px;
   }
   ::-webkit-scrollbar-track {
-    background: #090a15;
+    background: #f1f5f9;
   }
   ::-webkit-scrollbar-thumb {
-    background: #25284e;
+    background: #c7d2fe;
     border-radius: 9999px;
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: #4f46e5;
+    background: #818cf8;
   }
 }
 
 .glow-violet {
-  box-shadow: 0 0 35px -10px rgba(139, 92, 246, 0.28);
-}
-
-.glow-card {
-  background: linear-gradient(135deg, rgba(25, 27, 56, 0.6) 0%, rgba(17, 18, 40, 0.8) 100%);
-  border: 1px solid rgba(129, 140, 248, 0.16);
-  backdrop-filter: blur(12px);
-}
-
-.glow-card:hover {
-  border-color: rgba(167, 139, 250, 0.4);
-  box-shadow: 0 10px 30px -10px rgba(124, 58, 237, 0.25);
+  box-shadow: 0 10px 30px -10px rgba(124, 58, 237, 0.15);
 }

@@ -10,10 +10,10 @@ import Footer from './components/Footer';
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-[#090A15] text-slate-100 font-sans selection:bg-violet-600 selection:text-white">
-      {/* Background Decorative Gradient Blobs */}
-      <div className="fixed top-0 left-1/4 w-[500px] h-[500px] bg-violet-600/10 rounded-full blur-[120px] pointer-events-none" />
-      <div className="fixed bottom-0 right-1/4 w-[600px] h-[600px] bg-indigo-600/10 rounded-full blur-[140px] pointer-events-none" />
+    <div className="min-h-screen bg-slate-50 text-slate-800 font-sans selection:bg-violet-600 selection:text-white">
+      {/* Background Decorative Soft Violet Ambient Orbs */}
+      <div className="fixed top-0 left-1/4 w-[500px] h-[500px] bg-violet-200/30 rounded-full blur-[120px] pointer-events-none" />
+      <div className="fixed bottom-0 right-1/4 w-[600px] h-[600px] bg-indigo-200/25 rounded-full blur-[140px] pointer-events-none" />
 
       {/* Main Container: Split-Screen Layout */}
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row min-h-screen relative z-10">

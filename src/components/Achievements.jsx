@@ -7,37 +7,37 @@ export default function Achievements() {
       title: "LeetCode 360+ Problems Solved",
       subtitle: "Demonstrated strong grasp of Data Structures, Dynamic Programming, and Graph Algorithms.",
       badge: "Competitive",
-      icon: <Trophy className="w-4 h-4 text-amber-400" />,
+      icon: <Trophy className="w-4 h-4 text-amber-500" />,
     },
     {
       title: "LeetCode SQL 50 Badge",
       subtitle: "Verified proficiency in complex SQL joins, aggregations, and query optimizations.",
       badge: "Databases",
-      icon: <Award className="w-4 h-4 text-violet-400" />,
+      icon: <Award className="w-4 h-4 text-violet-600" />,
     },
     {
       title: "Ideathon 2026 Recognition",
       subtitle: "Developed 'Pantry-to-Plate' web platform, recognized for sustainable culinary UX.",
       badge: "Hackathon",
-      icon: <Trophy className="w-4 h-4 text-purple-400" />,
+      icon: <Trophy className="w-4 h-4 text-purple-600" />,
     },
     {
       title: "Made In India 2026 Hackathon",
-      subtitle: "Engineered a Smart Traffic Optimization system to dynamically route emergency transit.",
+      subtitle: "Engineered a Smart Traffic Optimization system to route emergency transit dynamically.",
       badge: "Innovation",
-      icon: <Trophy className="w-4 h-4 text-emerald-400" />,
+      icon: <Trophy className="w-4 h-4 text-emerald-600" />,
     },
     {
       title: "365-Day Duolingo German Streak",
       subtitle: "Completed an uninterrupted full year of German language acquisition with daily discipline.",
       badge: "Consistency",
-      icon: <Flame className="w-4 h-4 text-pink-400" />,
+      icon: <Flame className="w-4 h-4 text-pink-600" />,
     },
     {
       title: "CodeAlpha Dual Internships",
       subtitle: "Successfully completed dual-track virtual internships in Artificial Intelligence & Java Development.",
       badge: "Industry",
-      icon: <BookmarkCheck className="w-4 h-4 text-indigo-400" />,
+      icon: <BookmarkCheck className="w-4 h-4 text-indigo-600" />,
     },
   ];
 
@@ -50,70 +50,61 @@ export default function Achievements() {
 
   return (
     <section id="achievements" className="scroll-mt-12 space-y-6">
-      
-      {/* Header */}
       <div>
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-violet-950/70 border border-violet-800/40 text-violet-300 text-xs font-semibold uppercase tracking-wider mb-3">
-          <Trophy className="w-3.5 h-3.5" />
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-violet-50 border border-violet-200 text-violet-700 text-xs font-semibold uppercase tracking-wider mb-3">
+          <Trophy className="w-3.5 h-3.5 text-violet-600" />
           <span>Recognition</span>
         </div>
-        <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+        <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
           Achievements &amp; Certifications
         </h2>
-        <p className="mt-2 text-slate-400 text-sm">
-          Verified milestones in competitive problem-solving, hackathons, and certifications.
+        <p className="mt-2 text-slate-600 text-sm">
+          Verified milestones in competitive programming, hackathons, and certifications.
         </p>
       </div>
 
-      {/* Achievements Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         {achievements.map((item, idx) => (
           <div
             key={idx}
-            className="p-5 rounded-2xl bg-[#111228]/80 border border-indigo-900/40 hover:border-violet-500/50 hover:bg-[#161736] transition-all duration-300 shadow-sm hover:shadow-violet-900/20 hover:shadow-lg flex flex-col justify-between"
+            className="p-5 rounded-2xl bg-white border border-violet-100 hover:border-violet-300 hover:shadow-xl hover:shadow-violet-500/10 hover:-translate-y-0.5 transition-all duration-300 shadow-xs"
           >
-            <div>
-              <div className="flex items-center justify-between gap-2 mb-3">
-                <div className="p-2 rounded-xl bg-violet-950/70 border border-violet-800/40">
-                  {item.icon}
-                </div>
-                <span className="text-[10px] font-bold text-violet-300 bg-violet-950/60 px-2.5 py-0.5 rounded-full border border-violet-800/40">
-                  {item.badge}
-                </span>
+            <div className="flex items-center justify-between gap-2 mb-3">
+              <div className="p-2 rounded-xl bg-violet-50 border border-violet-200/60">
+                {item.icon}
               </div>
-              <h3 className="font-bold text-white text-sm">{item.title}</h3>
-              <p className="text-xs text-slate-400 mt-1 leading-relaxed">{item.subtitle}</p>
+              <span className="text-[10px] font-bold text-violet-700 bg-violet-50 px-2.5 py-0.5 rounded-full border border-violet-200/80">
+                {item.badge}
+              </span>
             </div>
+            <h3 className="font-bold text-slate-900 text-sm">{item.title}</h3>
+            <p className="text-xs text-slate-500 mt-1 leading-relaxed">{item.subtitle}</p>
           </div>
         ))}
       </div>
 
-      {/* Certifications Banner Grid */}
-      <div className="p-6 rounded-2xl bg-gradient-to-br from-[#12132D] via-[#151638] to-[#101128] border border-violet-800/30 space-y-4">
+      {/* Certifications */}
+      <div className="p-6 rounded-2xl bg-gradient-to-br from-violet-50 via-white to-indigo-50 border border-violet-200/80 shadow-xs space-y-4">
         <div className="flex items-center justify-between">
-          <h4 className="text-sm font-bold text-white flex items-center gap-2">
-            <BookmarkCheck className="w-4 h-4 text-violet-400" />
-            <span>Professional Certifications</span>
+          <h4 className="text-sm font-bold text-slate-900 flex items-center gap-2">
+            <BookmarkCheck className="w-4 h-4 text-violet-600" />
+            Professional Certifications
           </h4>
-          <span className="text-xs text-violet-300 font-medium">4 Verified Credentials</span>
+          <span className="text-xs text-violet-700 font-semibold">4 Credentials</span>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           {certifications.map((cert, idx) => (
-            <div
-              key={idx}
-              className="p-3.5 rounded-xl bg-[#0D0E22]/90 border border-indigo-900/30"
-            >
-              <p className="text-xs font-bold text-slate-200">{cert.name}</p>
-              <div className="flex items-center justify-between mt-1 text-[11px] text-slate-400">
+            <div key={idx} className="p-3.5 rounded-xl bg-white border border-violet-100/80 shadow-2xs">
+              <p className="text-xs font-bold text-slate-800">{cert.name}</p>
+              <div className="flex items-center justify-between mt-1 text-[11px] text-slate-500">
                 <span>{cert.org}</span>
-                <span className="text-violet-400">{cert.year}</span>
+                <span className="text-violet-600 font-semibold">{cert.year}</span>
               </div>
             </div>
           ))}
         </div>
       </div>
-
     </section>
   );
 }

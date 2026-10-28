@@ -7,17 +7,16 @@ export default function Footer() {
   };
 
   return (
-    <footer className="pt-10 pb-6 border-t border-indigo-950 text-xs text-slate-500">
+    <footer className="pt-10 pb-6 border-t border-slate-200 text-xs text-slate-500">
       <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
         <p>
           &copy; {new Date().getFullYear()} Kayalvizhi Sureshkumar. All rights reserved.
         </p>
-        
         <div className="flex items-center gap-4">
           <span>Crafted with React, Tailwind CSS &amp; Vercel</span>
           <button
             onClick={scrollToTop}
-            className="p-2 rounded-lg bg-[#141530] text-violet-400 hover:text-white hover:bg-violet-900/40 transition flex items-center gap-1 font-semibold"
+            className="p-2 rounded-lg bg-violet-50 text-violet-600 hover:bg-violet-600 hover:text-white border border-violet-200 transition flex items-center gap-1 font-semibold"
             aria-label="Back to top"
           >
             <span>Top</span>
