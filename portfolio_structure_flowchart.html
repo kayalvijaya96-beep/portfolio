@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Structure & Automation Flowchart - Kayalvizhi Sureshkumar</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    .glow-blue { box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.25); }
+    .glow-hover:hover { box-shadow: 0 15px 30px -5px rgba(59, 130, 246, 0.35); }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-blue-50 via-white to-sky-50 text-slate-800 min-h-screen p-4 sm:p-8">
+
+  <!-- Header -->
+  <header class="max-w-6xl mx-auto mb-10 text-center">
+    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-100 text-blue-700 text-xs font-semibold uppercase tracking-wider mb-3">
+      Portfolio Architecture & System Design
+    </div>
+    <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+      Kayalvizhi Sureshkumar &bull; Portfolio Structure & Flow
+    </h1>
+    <p class="mt-2 text-slate-600 max-w-2xl mx-auto text-sm sm:text-base">
+      Blue & White themed, mobile-responsive card layout paired with an automated Git &rarr; GitHub &rarr; Vercel deployment pipeline.
+    </p>
+
+    <!-- Navigation Tabs -->
+    <div class="flex justify-center mt-6 gap-3">
+      <button onclick="switchTab('page-structure')" id="tab-btn-page" class="px-5 py-2.5 rounded-xl font-semibold text-sm transition-all duration-200 bg-blue-600 text-white shadow-md hover:bg-blue-700">
+        1. Website Layout & Component Hierarchy
+      </button>
+      <button onclick="switchTab('deployment-flow')" id="tab-btn-deploy" class="px-5 py-2.5 rounded-xl font-semibold text-sm transition-all duration-200 bg-white text-slate-700 border border-slate-200 hover:bg-blue-50 hover:text-blue-600">
+        2. Automated CI/CD & Deployment Flow
+      </button>
+    </div>
+  </header>
+
+  <!-- TAB 1: WEBSITE STRUCTURE FLOWCHART -->
+  <main id="tab-page-structure" class="max-w-6xl mx-auto">
+    <div class="relative">
+      <div class="space-y-6 relative z-10">
+
+        <!-- 1. ROOT CONTAINER / HEADER -->
+        <div class="bg-white border-2 border-blue-500 rounded-2xl p-5 shadow-lg relative glow-blue">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+            <div class="flex items-center gap-3">
+              <span class="w-9 h-9 rounded-xl bg-blue-600 text-white flex items-center justify-center font-bold text-sm">01</span>
+              <div>
+                <h3 class="font-bold text-lg text-slate-900">Header & Sticky Navbar</h3>
+                <p class="text-xs text-slate-500">Blurred glass backdrop (<code class="bg-blue-50 text-blue-700 px-1 py-0.5 rounded">backdrop-blur-md bg-white/90 border-b border-blue-100</code>)</p>
+              </div>
+            </div>
+            <span class="inline-block text-xs font-medium px-3 py-1 bg-blue-50 text-blue-700 rounded-lg border border-blue-200">Global Navigation</span>
+          </div>
+          <!-- Sub-items -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 mt-4 pt-3 border-t border-slate-100 text-xs">
+            <div class="p-2.5 bg-slate-50 rounded-lg font-medium text-slate-700 border border-slate-200/60 text-center">Brand Logo: Kayalvizhi.S</div>
+            <div class="p-2.5 bg-slate-50 rounded-lg font-medium text-slate-700 border border-slate-200/60 text-center">Smooth Anchor Links</div>
+            <div class="p-2.5 bg-slate-50 rounded-lg font-medium text-slate-700 border border-slate-200/60 text-center">Resume PDF Download</div>
+            <div class="p-2.5 bg-slate-50 rounded-lg font-medium text-slate-700 border border-slate-200/60 text-center">Mobile Hamburger Menu</div>
+          </div>
+        </div>
+
+        <!-- Connector Arrow -->
+        <div class="flex justify-center -my-2">
+          <svg class="w-6 h-6 text-blue-500 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+        </div>
+
+        <!-- 2. HERO SECTION -->
+        <div class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white rounded-2xl p-6 shadow-xl relative glow-hover transition-all">
+          <div class="flex flex-col md:flex-row items-center gap-6">
+            <!-- Enlarged Profile Picture Container -->
+            <div class="w-32 h-32 sm:w-36 sm:h-36 rounded-full border-4 border-white shadow-2xl overflow-hidden bg-white/20 shrink-0 flex items-center justify-center relative ring-4 ring-blue-300">
+              <img src="./assets/profile.jpg" alt="Kayalvizhi Sureshkumar" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=300'">
+            </div>
+            <div class="text-center md:text-left flex-1">
+              <div class="inline-block px-3 py-0.5 rounded-full bg-blue-500/40 border border-blue-300/40 text-blue-100 text-xs font-semibold mb-2">Hero Section</div>
+              <h3 class="text-2xl sm:text-3xl font-extrabold tracking-tight">Kayalvizhi Sureshkumar</h3>
+              <p class="text-blue-100 text-sm mt-1">Computer Science & Engineering Student @ Chennai Institute of Technology (CGPA: 9.04)</p>
+              <p class="text-blue-200 text-xs mt-1">Enlarged profile picture + animated greeting + CTA buttons ("View Projects", "Contact Me")</p>
+              <div class="flex flex-wrap gap-2 mt-4 justify-center md:justify-start text-xs font-medium">
+                <span class="px-3 py-1 bg-white/20 rounded-lg">AI & Machine Learning</span>
+                <span class="px-3 py-1 bg-white/20 rounded-lg">Computer Vision (YOLOv8)</span>
+                <span class="px-3 py-1 bg-white/20 rounded-lg">Full-Stack Development</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Connector Arrow -->
+        <div class="flex justify-center -my-2">
+          <svg class="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+        </div>
+
+        <!-- 3. MAIN BODY SECTIONS (CARDS GRID) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+
+          <!-- About Me Card -->
+          <div class="bg-white border border-blue-200 rounded-2xl p-5 shadow-sm hover:shadow-md transition">
+            <div class="flex items-center gap-3 mb-3">
+              <div class="w-8 h-8 rounded-lg bg-blue-100 text-blue-700 flex items-center justify-center font-bold text-xs">03</div>
+              <h4 class="font-bold text-slate-800">About Me & Education</h4>
+            </div>
+            <ul class="text-xs text-slate-600 space-y-2">
+              <li class="flex items-start gap-2">
+                <span class="text-blue-600 font-bold">&bull;</span>
+                <span><strong>Education:</strong> Chennai Institute of Technology &bull; B.E. Computer Science & Engineering (CGPA: 9.04)</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-blue-600 font-bold">&bull;</span>
+                <span><strong>Focus Areas:</strong> Artificial Intelligence, Computer Vision, Scalable Web Apps, Problem Solving.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-blue-600 font-bold">&bull;</span>
+                <span><strong>Languages:</strong> English, Tamil, German (365-day Duolingo streak)</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Internships Card -->
+          <div class="bg-white border border-blue-200 rounded-2xl p-5 shadow-sm hover:shadow-md transition">
+            <div class="flex items-center gap-3 mb-3">
+              <div class="w-8 h-8 rounded-lg bg-blue-100 text-blue-700 flex items-center justify-center font-bold text-xs">04</div>
+              <h4 class="font-bold text-slate-800">Internship Experience</h4>
+            </div>
+            <div class="space-y-2.5 text-xs">
+              <div class="p-2.5 bg-blue-50/60 rounded-xl border border-blue-100">
+                <div class="flex justify-between items-center">
+                  <p class="font-bold text-blue-900">CodeAlpha &bull; AI Virtual Intern</p>
+                  <span class="text-[10px] text-blue-600 font-semibold">Feb - Mar 2026</span>
+                </div>
+                <p class="text-slate-600 mt-1">Real-time object detection using YOLOv8 & multi-language translation web tool with Streamlit.</p>
+              </div>
+              <div class="p-2.5 bg-blue-50/60 rounded-xl border border-blue-100">
+                <div class="flex justify-between items-center">
+                  <p class="font-bold text-blue-900">CodeAlpha &bull; Java Development Intern</p>
+                  <span class="text-[10px] text-blue-600 font-semibold">May - Jun 2026</span>
+                </div>
+                <p class="text-slate-600 mt-1">Student Grade Tracker console app & interactive stock trading simulation platform.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Featured Projects Card (Full Width) -->
+          <div class="bg-white border border-blue-200 rounded-2xl p-5 shadow-sm hover:shadow-md transition md:col-span-2">
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex items-center gap-3">
+                <div class="w-8 h-8 rounded-lg bg-blue-100 text-blue-700 flex items-center justify-center font-bold text-xs">05</div>
+                <h4 class="font-bold text-slate-800">Featured Projects (Responsive Card Grid)</h4>
+              </div>
+              <span class="text-xs bg-blue-100 text-blue-800 px-3 py-1 rounded-full font-semibold">5 Projects Highlighted</span>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5 text-xs">
+              <!-- Project 1 -->
+              <div class="border border-slate-200 rounded-xl p-3.5 bg-slate-50/60 hover:border-blue-300 transition">
+                <span class="text-[10px] font-bold text-blue-600 uppercase tracking-wider">AI / Computer Vision</span>
+                <p class="font-bold text-slate-800 text-sm mt-1">Object Detection System</p>
+                <p class="text-slate-600 text-xs mt-1">Python, OpenCV, Ultralytics YOLOv8 identifying objects live from webcam feed.</p>
+                <div class="mt-3 flex gap-2">
+                  <span class="px-2 py-0.5 bg-blue-100 text-blue-700 rounded text-[10px] font-semibold">YOLOv8</span>
+                  <span class="px-2 py-0.5 bg-blue-100 text-blue-700 rounded text-[10px] font-semibold">OpenCV</span>
+                </div>
+              </div>
+              <!-- Project 2 -->
+              <div class="border border-slate-200 rounded-xl p-3.5 bg-slate-50/60 hover:border-blue-300 transition">
+                <span class="text-[10px] font-bold text-blue-600 uppercase tracking-wider">NLP / Streamlit</span>
+                <p class="font-bold text-slate-800 text-sm mt-1">Language Translator Tool</p>
+                <p class="text-slate-600 text-xs mt-1">Python, Streamlit, Googletrans enabling real-time cross-lingual text translation.</p>
+                <div class="mt-3 flex gap-2">
+                  <span class="px-2 py-0.5 bg-blue-100 text-blue-700 rounded text-[10px] font-semibold">Streamlit</span>
+                  <span class="px-2 py-0.5 bg-blue-100 text-blue-700 rounded text-[10px] font-semibold">Python</span>
+                </div>
+              </div>
+              <!-- Project 3 -->
+              <div class="border border-slate-200 rounded-xl p-3.5 bg-slate-50/60 hover:border-blue-300 transition">
+                <span class="text-[10px] font-bold text-blue-600 uppercase tracking-wider">Java Software</span>
+                <p class="font-bold text-slate-800 text-sm mt-1">Stock Trading Platform</p>
+                <p class="text-slate-600 text-xs mt-1">Java OOP, HashMaps, Collections: simulated real-time buying, selling & portfolio valuation.</p>
+                <div class="mt-3 flex gap-2">
+                  <span class="px-2 py-0.5 bg-blue-100 text-blue-700 rounded text-[10px] font-semibold">Java OOP</span>
+                  <span class="px-2 py-0.5 bg-blue-100 text-blue-700 rounded text-[10px] font-semibold">Collections</span>
+                </div>
+              </div>
+              <!-- Project 4 -->
+              <div class="border border-slate-200 rounded-xl p-3.5 bg-slate-50/60 hover:border-blue-300 transition">
+                <span class="text-[10px] font-bold text-blue-600 uppercase tracking-wider">Ideathon 2026</span>
+                <p class="font-bold text-slate-800 text-sm mt-1">Pantry-to-Plate</p>
+                <p class="text-slate-600 text-xs mt-1">HTML, CSS, JS web solution helping users discover recipes with available ingredients.</p>
+                <div class="mt-3 flex gap-2">
+                  <span class="px-2 py-0.5 bg-blue-100 text-blue-700 rounded text-[10px] font-semibold">JavaScript</span>
+                  <span class="px-2 py-0.5 bg-blue-100 text-blue-700 rounded text-[10px] font-semibold">CSS3</span>
+                </div>
+              </div>
+              <!-- Project 5 -->
+              <div class="border border-slate-200 rounded-xl p-3.5 bg-slate-50/60 hover:border-blue-300 transition">
+                <span class="text-[10px] font-bold text-blue-600 uppercase tracking-wider">EdTech / AI</span>
+                <p class="font-bold text-slate-800 text-sm mt-1">StudyPilot Progress Tracker</p>
+                <p class="text-slate-600 text-xs mt-1">AI-based study tracker using Python, NumPy & Streamlit for monitoring academic learning curves.</p>
+                <div class="mt-3 flex gap-2">
+                  <span class="px-2 py-0.5 bg-blue-100 text-blue-700 rounded text-[10px] font-semibold">NumPy</span>
+                  <span class="px-2 py-0.5 bg-blue-100 text-blue-700 rounded text-[10px] font-semibold">AI Logic</span>
+                </div>
+              </div>
+              <!-- Call to Action Card -->
+              <div class="border-2 border-dashed border-blue-300 rounded-xl p-3.5 bg-blue-50/40 flex flex-col items-center justify-center text-center">
+                <span class="text-blue-700 font-bold text-sm">Interactive Elements</span>
+                <p class="text-slate-500 text-xs mt-1">Each card includes GitHub repository links, modal previews, and live demo buttons.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skills Matrix Card -->
+          <div class="bg-white border border-blue-200 rounded-2xl p-5 shadow-sm hover:shadow-md transition">
+            <div class="flex items-center gap-3 mb-3">
+              <div class="w-8 h-8 rounded-lg bg-blue-100 text-blue-700 flex items-center justify-center font-bold text-xs">06</div>
+              <h4 class="font-bold text-slate-800">Technical Skills Matrix</h4>
+            </div>
+            <div class="space-y-3 text-xs">
+              <div>
+                <p class="font-semibold text-slate-700">Languages & Core:</p>
+                <div class="flex flex-wrap gap-1.5 mt-1">
+                  <span class="px-2.5 py-1 bg-blue-50 text-blue-700 rounded-md border border-blue-200 font-medium">Python</span>
+                  <span class="px-2.5 py-1 bg-blue-50 text-blue-700 rounded-md border border-blue-200 font-medium">Java</span>
+                  <span class="px-2.5 py-1 bg-blue-50 text-blue-700 rounded-md border border-blue-200 font-medium">C / C++</span>
+                  <span class="px-2.5 py-1 bg-blue-50 text-blue-700 rounded-md border border-blue-200 font-medium">HTML5 & CSS3</span>
+                  <span class="px-2.5 py-1 bg-blue-50 text-blue-700 rounded-md border border-blue-200 font-medium">JavaScript</span>
+                </div>
+              </div>
+              <div>
+                <p class="font-semibold text-slate-700">Databases & AI Tools:</p>
+                <div class="flex flex-wrap gap-1.5 mt-1">
+                  <span class="px-2.5 py-1 bg-slate-100 text-slate-700 rounded-md font-medium">MySQL</span>
+                  <span class="px-2.5 py-1 bg-slate-100 text-slate-700 rounded-md font-medium">MongoDB</span>
+                  <span class="px-2.5 py-1 bg-slate-100 text-slate-700 rounded-md font-medium">OpenCV</span>
+                  <span class="px-2.5 py-1 bg-slate-100 text-slate-700 rounded-md font-medium">NumPy</span>
+                  <span class="px-2.5 py-1 bg-slate-100 text-slate-700 rounded-md font-medium">Streamlit</span>
+                  <span class="px-2.5 py-1 bg-slate-100 text-slate-700 rounded-md font-medium">Docker (Basics)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Achievements & Badges Card -->
+          <div class="bg-white border border-blue-200 rounded-2xl p-5 shadow-sm hover:shadow-md transition">
+            <div class="flex items-center gap-3 mb-3">
+              <div class="w-8 h-8 rounded-lg bg-blue-100 text-blue-700 flex items-center justify-center font-bold text-xs">07</div>
+              <h4 class="font-bold text-slate-800">Achievements & Certifications</h4>
+            </div>
+            <div class="space-y-2 text-xs text-slate-700">
+              <div class="flex items-center gap-2 p-1.5 bg-blue-50/50 rounded-lg">
+                <span class="text-blue-600 font-bold">&#10003;</span>
+                <span><strong>LeetCode:</strong> 360+ Solved &bull; SQL 50 Badge</span>
+              </div>
+              <div class="flex items-center gap-2 p-1.5 bg-blue-50/50 rounded-lg">
+                <span class="text-blue-600 font-bold">&#10003;</span>
+                <span><strong>Hackathons:</strong> Ideathon 2026, Made In India 2026 (Traffic AI)</span>
+              </div>
+              <div class="flex items-center gap-2 p-1.5 bg-blue-50/50 rounded-lg">
+                <span class="text-blue-600 font-bold">&#10003;</span>
+                <span><strong>Certifications:</strong> Oracle, GDG, Cisco Python 1 & 2, MongoDB</span>
+              </div>
+              <div class="flex items-center gap-2 p-1.5 bg-blue-50/50 rounded-lg">
+                <span class="text-blue-600 font-bold">&#10003;</span>
+                <span><strong>Consistency:</strong> 365 Days German Streak on Duolingo</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Connector Arrow -->
+        <div class="flex justify-center -my-2">
+          <svg class="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+        </div>
+
+        <!-- 4. CONTACT & FOOTER -->
+        <div class="bg-white border-2 border-blue-500 rounded-2xl p-5 shadow-lg">
+          <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-3 text-center sm:text-left">
+              <span class="w-9 h-9 rounded-xl bg-blue-600 text-white flex items-center justify-center font-bold text-sm">08</span>
+              <div>
+                <h3 class="font-bold text-slate-900">Contact Section & Responsive Footer</h3>
+                <p class="text-xs text-slate-500">kayalvijaya96@gmail.com &bull; +91 81228 90296 &bull; LinkedIn &bull; GitHub</p>
+              </div>
+            </div>
+            <div class="flex gap-2">
+              <span class="text-xs font-semibold px-3 py-1.5 bg-blue-50 text-blue-700 rounded-lg border border-blue-200">Email Contact Form</span>
+              <span class="text-xs font-semibold px-3 py-1.5 bg-blue-600 text-white rounded-lg">Social Icon Links</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- TAB 2: AUTOMATION & DEPLOYMENT FLOWCHART -->
+  <section id="tab-deployment-flow" class="max-w-6xl mx-auto hidden">
+    <div class="bg-white border border-blue-200 rounded-2xl p-6 sm:p-8 shadow-xl">
+      <div class="text-center mb-8">
+        <h2 class="text-2xl font-bold text-slate-900">End-to-End Automated Deployment Pipeline</h2>
+        <p class="text-sm text-slate-600 mt-1">Zero-touch continuous integration and delivery from Antigravity IDE straight to Vercel global edge</p>
+      </div>
+
+      <!-- Pipeline Steps Flow -->
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-4 relative">
+
+        <!-- Step 1 -->
+        <div class="p-5 rounded-xl border-2 border-blue-400 bg-blue-50/50 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="px-2.5 py-1 bg-blue-600 text-white text-xs font-bold rounded-md">STEP 1</span>
+              <span class="text-xs text-blue-600 font-semibold">Local IDE</span>
+            </div>
+            <h4 class="font-bold text-slate-900 text-base">Antigravity IDE</h4>
+            <p class="text-xs text-slate-600 mt-2">
+              Develop & test components with Tailwind CSS. Verify mobile responsive card layouts.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-blue-200 font-mono text-[11px] text-blue-800 bg-white p-2 rounded">
+            git add .<br>git commit -m "feat: portfolio"<br>git push origin main
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="p-5 rounded-xl border-2 border-blue-300 bg-white flex flex-col justify-between shadow-sm">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="px-2.5 py-1 bg-slate-800 text-white text-xs font-bold rounded-md">STEP 2</span>
+              <span class="text-xs text-slate-600 font-semibold">Source Control</span>
+            </div>
+            <h4 class="font-bold text-slate-900 text-base">GitHub Repository</h4>
+            <p class="text-xs text-slate-600 mt-2">
+              Hosted repository (<code class="text-blue-600">kayalvijaya96-beep/portfolio</code>). Webhooks trigger Vercel pipeline automatically.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-200 font-mono text-[11px] text-slate-700 bg-slate-50 p-2 rounded">
+            Branch: `main`<br>Automated CI validation
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="p-5 rounded-xl border-2 border-blue-500 bg-blue-50/80 flex flex-col justify-between shadow-sm">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="px-2.5 py-1 bg-blue-500 text-white text-xs font-bold rounded-md">STEP 3</span>
+              <span class="text-xs text-blue-600 font-semibold">Automated CI/CD</span>
+            </div>
+            <h4 class="font-bold text-slate-900 text-base">GitHub Actions / Vercel</h4>
+            <p class="text-xs text-slate-600 mt-2">
+              Automated build: Tailwind CSS compilation, asset compression, HTML/JS bundle optimization.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-blue-200 font-mono text-[11px] text-blue-800 bg-white p-2 rounded">
+            npm run build<br>&bull; Optimizes images<br>&bull; Purges unused CSS
+          </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="p-5 rounded-xl border-2 border-emerald-500 bg-emerald-50/50 flex flex-col justify-between shadow-sm">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="px-2.5 py-1 bg-emerald-600 text-white text-xs font-bold rounded-md">STEP 4</span>
+              <span class="text-xs text-emerald-600 font-semibold">Live Production</span>
+            </div>
+            <h4 class="font-bold text-slate-900 text-base">Vercel Edge Network</h4>
+            <p class="text-xs text-slate-600 mt-2">
+              Worldwide distribution with automatic SSL, HTTP/3, custom domain, and lightning-fast load times.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-emerald-200 font-mono text-[11px] text-emerald-800 bg-white p-2 rounded">
+            https://kayalvizhi.vercel.app<br>Status: 200 OK (Edge Live)
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Highlights -->
+      <div class="mt-8 p-5 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl border border-blue-200">
+        <h5 class="font-bold text-blue-900 text-sm mb-2">Automated Pipeline Highlights:</h5>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs text-slate-700">
+          <div class="flex items-start gap-2">
+            <span class="text-blue-600 font-bold">&#10003;</span>
+            <span><strong>Push-to-Deploy:</strong> Push commits to GitHub and Vercel deploys immediately.</span>
+          </div>
+          <div class="flex items-start gap-2">
+            <span class="text-blue-600 font-bold">&#10003;</span>
+            <span><strong>Preview Environments:</strong> Every pull request gets an isolated preview URL.</span>
+          </div>
+          <div class="flex items-start gap-2">
+            <span class="text-blue-600 font-bold">&#10003;</span>
+            <span><strong>Zero Downtime:</strong> Atomic rollouts guarantee visitors never see a broken build.</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer Info -->
+  <footer class="max-w-6xl mx-auto mt-8 text-center text-xs text-slate-500">
+    Designed for Kayalvizhi Sureshkumar &bull; Portfolio Structure & Flowchart
+  </footer>
+
+  <script>
+    function switchTab(tab) {
+      const pageTab = document.getElementById('tab-page-structure');
+      const deployTab = document.getElementById('tab-deployment-flow');
+      const pageBtn = document.getElementById('tab-btn-page');
+      const deployBtn = document.getElementById('tab-btn-deploy');
+
+      if (tab === 'page-structure') {
+        pageTab.classList.remove('hidden');
+        deployTab.classList.add('hidden');
+        pageBtn.className = "px-5 py-2.5 rounded-xl font-semibold text-sm transition-all duration-200 bg-blue-600 text-white shadow-md hover:bg-blue-700";
+        deployBtn.className = "px-5 py-2.5 rounded-xl font-semibold text-sm transition-all duration-200 bg-white text-slate-700 border border-slate-200 hover:bg-blue-50 hover:text-blue-600";
+      } else {
+        pageTab.classList.add('hidden');
+        deployTab.classList.remove('hidden');
+        deployBtn.className = "px-5 py-2.5 rounded-xl font-semibold text-sm transition-all duration-200 bg-blue-600 text-white shadow-md hover:bg-blue-700";
+        pageBtn.className = "px-5 py-2.5 rounded-xl font-semibold text-sm transition-all duration-200 bg-white text-slate-700 border border-slate-200 hover:bg-blue-50 hover:text-blue-600";
+      }
+    }
+  </script>
+</body>
+</html>
+
