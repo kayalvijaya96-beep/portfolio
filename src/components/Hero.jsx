@@ -123,18 +123,6 @@ export default function Hero() {
                   }}
                 />
               </div>
-
-              {/* Float Badge 1: LeetCode */}
-              <div className="absolute -bottom-2 -left-2 sm:bottom-2 sm:-left-4 bg-white/95 backdrop-blur-md border border-blue-200/80 rounded-2xl px-3.5 py-2 shadow-lg flex items-center gap-2">
-                <span className="w-3 h-3 rounded-full bg-emerald-500"></span>
-                <span className="text-xs font-bold text-slate-800">360+ LeetCode</span>
-              </div>
-
-              {/* Float Badge 2: AI / YOLOv8 */}
-              <div className="absolute -top-2 -right-2 sm:top-2 sm:-right-4 bg-white/95 backdrop-blur-md border border-blue-200/80 rounded-2xl px-3.5 py-2 shadow-lg flex items-center gap-2">
-                <span className="text-base">🤖</span>
-                <span className="text-xs font-bold text-blue-700">YOLOv8 & OpenCV</span>
-              </div>
             </div>
           </div>
 
