@@ -124,15 +124,25 @@ export default function Sidebar() {
             <span>Let's Connect</span>
             <ArrowUpRight className="w-3.5 h-3.5" />
           </a>
-          <button
-            onClick={() => setShowResumeModal(true)}
-            type="button"
-            className="py-2.5 px-3.5 text-xs font-semibold text-slate-300 bg-[#161734] hover:bg-[#1E2046] border border-indigo-800/40 hover:border-violet-600/50 rounded-xl transition-all flex items-center gap-1.5 cursor-pointer shadow-xs"
-            title="Download or Preview Resume"
-          >
-            <Download className="w-3.5 h-3.5 text-violet-400" />
-            <span>Resume</span>
-          </button>
+          <div className="inline-flex items-center rounded-xl shadow-xs">
+            <a
+              href="/Kayalvizhi_Resume.pdf"
+              download="Kayalvizhi_Sureshkumar_Resume.pdf"
+              className="py-2.5 px-3 text-xs font-semibold text-slate-300 bg-[#161734] hover:bg-[#1E2046] hover:text-white border border-indigo-800/40 hover:border-violet-600/50 rounded-l-xl transition-all flex items-center gap-1.5"
+              title="Download Resume PDF directly"
+            >
+              <Download className="w-3.5 h-3.5 text-violet-400" />
+              <span>Resume</span>
+            </a>
+            <button
+              onClick={() => setShowResumeModal(true)}
+              type="button"
+              className="py-2.5 px-2.5 text-xs font-semibold text-slate-400 hover:text-white bg-[#161734] hover:bg-[#1E2046] border-t border-b border-r border-indigo-800/40 hover:border-violet-600/50 rounded-r-xl transition-all cursor-pointer"
+              title="Preview Resume Details & Pop-up"
+            >
+              <FileText className="w-3.5 h-3.5 text-violet-400" />
+            </button>
+          </div>
         </div>
 
         {/* Social Icons Bar */}
