@@ -84,3 +84,4 @@ export default function ResumeModal({ isOpen, onClose }) {
     </div>
   );
 }
+
