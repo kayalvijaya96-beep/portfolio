@@ -1,38 +1,44 @@
-import React from 'react';
-import Sidebar from './components/Sidebar';
-import About from './components/About';
-import Experience from './components/Experience';
-import Projects from './components/Projects';
-import Skills from './components/Skills';
-import Achievements from './components/Achievements';
-import Contact from './components/Contact';
+import React, { useState } from 'react';
+import Navbar from './components/Navbar';
+import HeroBento from './components/HeroBento';
+import ExperienceBento from './components/ExperienceBento';
+import ProjectsBento from './components/ProjectsBento';
+import SkillsBento from './components/SkillsBento';
+import AchievementsBento from './components/AchievementsBento';
+import ContactBento from './components/ContactBento';
 import Footer from './components/Footer';
+import ResumeModal from './components/ResumeModal';
 
 export default function App() {
+  const [isResumeOpen, setIsResumeOpen] = useState(false);
+
   return (
-    <div className="min-h-screen bg-[#090A15] text-slate-100 font-sans selection:bg-violet-600 selection:text-white">
-      {/* Background Decorative Ambient Orbs */}
-      <div className="fixed top-0 left-1/4 w-[500px] h-[500px] bg-violet-600/10 rounded-full blur-[120px] pointer-events-none" />
-      <div className="fixed bottom-0 right-1/4 w-[600px] h-[600px] bg-indigo-600/10 rounded-full blur-[140px] pointer-events-none" />
+    <div className="min-h-screen bg-[#07090E] text-slate-100 font-sans selection:bg-blue-600 selection:text-white relative bg-grid-pattern">
+      
+      {/* Ambient Lighting Orbs */}
+      <div className="fixed top-0 left-1/3 -translate-x-1/2 w-[600px] h-[500px] bg-blue-600/10 rounded-full blur-[140px] pointer-events-none" />
+      <div className="fixed bottom-0 right-1/4 w-[600px] h-[600px] bg-indigo-600/10 rounded-full blur-[160px] pointer-events-none" />
 
-      {/* Main Container: Split-Screen Layout */}
-      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row min-h-screen relative z-10">
-        
-        {/* Left Column: Fixed / Sticky Profile & Navigation Sidebar */}
-        <Sidebar />
+      {/* Top Navbar */}
+      <Navbar onOpenResume={() => setIsResumeOpen(true)} />
 
-        {/* Right Column: Scrollable Content Feed */}
-        <main className="flex-1 min-w-0 p-6 sm:p-10 lg:p-14 space-y-20 lg:space-y-24">
-          <About />
-          <Experience />
-          <Projects />
-          <Skills />
-          <Achievements />
-          <Contact />
-          <Footer />
-        </main>
+      {/* Main Bento Layout Container */}
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16 sm:space-y-24 relative z-10 pb-10">
+        <HeroBento onOpenResume={() => setIsResumeOpen(true)} />
+        <ExperienceBento />
+        <ProjectsBento />
+        <SkillsBento />
+        <AchievementsBento />
+        <ContactBento onOpenResume={() => setIsResumeOpen(true)} />
+        <Footer />
+      </main>
 
-      </div>
+      {/* Resume Pop-up Modal */}
+      <ResumeModal 
+        isOpen={isResumeOpen} 
+        onClose={() => setIsResumeOpen(false)} 
+      />
+
     </div>
   );
 }
