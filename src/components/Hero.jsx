@@ -63,10 +63,10 @@ export default function Hero() {
                 <span>Get In Touch</span>
               </a>
               <a
-                href="/profile.jpg"
-                download="Kayalvizhi_Resume.jpg"
+                href="/Kayalvizhi_Resume.pdf"
+                download="Kayalvizhi_Sureshkumar_Resume.pdf"
                 className="inline-flex items-center gap-2 px-5 py-3.5 text-sm font-semibold text-slate-700 bg-slate-100 hover:bg-slate-200 rounded-xl transition-all"
-                title="Download Resume"
+                title="Download Resume PDF"
               >
                 <Download className="w-4 h-4 text-blue-600" />
                 <span>Resume</span>

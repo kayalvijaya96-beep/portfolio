@@ -5,26 +5,26 @@
 @layer base {
   body {
     font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
-    background-color: #f8fafc;
-    color: #1e293b;
+    background-color: #090a15;
+    color: #e2e8f0;
   }
 
-  /* Custom light violet scrollbar */
+  /* Custom dark violet scrollbar */
   ::-webkit-scrollbar {
     width: 7px;
   }
   ::-webkit-scrollbar-track {
-    background: #f1f5f9;
+    background: #090a15;
   }
   ::-webkit-scrollbar-thumb {
-    background: #c7d2fe;
+    background: #25284e;
     border-radius: 9999px;
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: #818cf8;
+    background: #4f46e5;
   }
 }
 
 .glow-violet {
-  box-shadow: 0 10px 30px -10px rgba(124, 58, 237, 0.15);
+  box-shadow: 0 10px 30px -10px rgba(124, 58, 237, 0.25);
 }
